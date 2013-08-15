@@ -1,4 +1,6 @@
 GreatHeightsInventory::Application.routes.draw do
+  resources :inventory_checks
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -47,5 +49,5 @@ GreatHeightsInventory::Application.routes.draw do
   #     resources :products
   #   end
 
-  root :to => "home#index"
+  root :to => "inventory_checks#index"
 end

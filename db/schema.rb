@@ -11,9 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130730230002) do
+ActiveRecord::Schema.define(version: 20130813175358) do
 
-  create_table "inventories", force: true do |t|
+  create_table "inventory_checks", force: true do |t|
+    t.integer  "user_id"
     t.string   "beginning_or_end"
     t.string   "shift"
     t.string   "forty_mg_lot_number"
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20130730230002) do
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "user_type"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

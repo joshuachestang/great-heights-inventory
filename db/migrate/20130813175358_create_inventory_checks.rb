@@ -1,6 +1,7 @@
-class CreateInventories < ActiveRecord::Migration
+class CreateInventoryChecks < ActiveRecord::Migration
   def change
-    create_table :inventories do |t|
+    create_table :inventory_checks do |t|
+    	t.integer :user_id
     	t.string :beginning_or_end
     	t.string :shift
     	t.string :forty_mg_lot_number
@@ -16,7 +17,7 @@ class CreateInventories < ActiveRecord::Migration
     	t.float :five_mg_tablet_count
     	t.float :five_mg_total_inventory
     	t.integer :total_inventory_count
-
+	
       t.timestamps
     end
   end
