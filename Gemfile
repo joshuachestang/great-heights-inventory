@@ -21,6 +21,16 @@ gem 'protected_attributes'
 
 gem 'simple_form'
 
+gem "font-awesome-rails"
+
+group :assets do
+  gem 'twitter-bootstrap-rails'
+  gem 'compass-rails'
+  gem 'compass-h5bp'
+  gem "therubyracer"
+  gem "less-rails"
+end
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
