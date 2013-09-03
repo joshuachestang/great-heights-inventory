@@ -1,12 +1,12 @@
 <div id="signup-page">
   <div class="container">
     <div class="row-fluid">
-      <div class="span4 offset4">
+      <div class="span4 offset4" id="signup-box">
         <div class="text-center">
-          <div class="sky-logo"><i class="icon-cloud"></i> <span>SkyHQ</span></div>
+          <div class="sky-logo"><i class="icon-cloud"></i> <span>Great Heights Inventory Tracker</span></div>
         </div>
         <div class="page-bg">
-          <%= simple_form_for(@super_admin, as: :super_admin, url: session_path(:super_admin)) do |f| %>
+          <%= simple_form_for(@user, as: :user, url: session_path(:user)) do |f| %>
             <h2 class="no-top-margin">Login</h2>
             <%= f.error_notification %>
 
@@ -29,4 +29,3 @@
   </div>
 
 </div>
-

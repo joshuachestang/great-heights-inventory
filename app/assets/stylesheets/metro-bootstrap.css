@@ -11,6 +11,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 article,
 aside,
 details,
@@ -35,6 +44,7 @@ audio:not([controls]) {
 }
 html {
   font-size: 100%;
+  width: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -210,13 +220,14 @@ textarea {
 body {
   margin: 0;
   font-family: "Segoe UI", "Segoe WP", "Helvetica Neue", sans-serif;
-  font-size: 14px;
+  font-size: 19px;
+  width: 100%;
   line-height: 25px;
-  color: #333333;
+  color: white;
   background-color: #ffffff;
 }
 a {
-  color: #2e8bcc;
+  color: white;
   text-decoration: none;
   text-decoration: none;
   text-decoration: none;
@@ -539,8 +550,9 @@ a:hover {
 }
 .container-fluid {
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 11px;
   *zoom: 1;
+  overflow-x: scroll;
 }
 .container-fluid:before,
 .container-fluid:after {
@@ -2989,17 +3001,17 @@ input[type="submit"].btn.btn-mini {
   box-shadow: none;
 }
 .btn-link {
-  border-color: transparent;
+  background-color: #66A1D2;
   cursor: pointer;
-  color: #2e8bcc;
+  color: white;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
 .btn-link:hover {
-  color: #20608e;
+  color: #0B5FA5;
   text-decoration: underline;
-  background-color: transparent;
+  background-color: white;
 }
 .btn-link[disabled]:hover {
   color: #333333;
@@ -3609,7 +3621,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar {
   overflow: visible;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   *position: relative;
   *z-index: 2;
 }
@@ -3617,12 +3629,9 @@ input[type="submit"].btn.btn-mini {
   min-height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #ffffff;
+  background-color: #0B5FA5;
   background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ffffff));
-  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
   background-image: -o-linear-gradient(top, #ffffff, #ffffff);
-  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffffffff', GradientType=0);
   border: 1px solid #e0e0e0;
@@ -3653,12 +3662,11 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   float: left;
   display: block;
-  padding: 7.5px 20px 7.5px;
+  padding: 22.5px 20px 7.5px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
-  color: #555555;
-  text-shadow: 0 1px 0 #ffffff;
+  color: white;
 }
 .navbar .brand:hover {
   text-decoration: none;
@@ -3803,7 +3811,7 @@ input[type="submit"].btn.btn-mini {
   position: relative;
   left: 0;
   display: block;
-  float: left;
+  float: right;
   margin: 0 10px 0 130px;
 }
 .navbar .nav.pull-right {
@@ -6201,6 +6209,7 @@ li {
   -moz-box-shadow: none;
   box-shadow: none;
   padding-bottom: 10px;
+  padding-top: 10px;
   border-bottom: 1px solid #eeeeee;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -6217,11 +6226,14 @@ li {
   padding-bottom: 10px;
   margin-left: 15px;
   padding-top: 10px;
-  color: #999999;
+  font-size: 45px;
+  line-height: 45px;
+  color: #0B5FA5;
+  background-color: white;
 }
 .navbar .nav .active > a,
 .navbar .nav > li > a:hover {
-  color: #333333;
+  color: white;
   text-decoration: none;
 }
 .navbar .nav > .active > a,

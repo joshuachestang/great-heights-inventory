@@ -12,6 +12,7 @@ class InventoryChecksController < ApplicationController
   # GET /inventory_checks/1
   # GET /inventory_checks/1.json
   def show
+    @inventory_check = InventoryCheck.find(params[:id])
   end
 
   # GET /inventory_checks/new
@@ -21,16 +22,17 @@ class InventoryChecksController < ApplicationController
 
   # GET /inventory_checks/1/edit
   def edit
+    @inventory_check = InventoryCheck.find(params[:id])
   end
 
   # POST /inventory_checks
   # POST /inventory_checks.json
   def create
-    @inventory_check = InventoryCheck.new(inventory_check_params)
-
+    @inventory_check = current_user.inventory_checks.build(params[:inventory_check])
+    @inventory_check.save
     respond_to do |format|
       if @inventory_check.save
-        format.html { redirect_to @inventory_check, notice: 'Inventory check was successfully created.' }
+        format.html { redirect_to :back, notice: 'Inventory check was successfully created.' }
         format.json { render action: 'show', status: :created, location: @inventory_check }
       else
         format.html { render action: 'new' }
