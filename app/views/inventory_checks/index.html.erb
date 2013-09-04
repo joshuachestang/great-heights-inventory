@@ -1,7 +1,7 @@
 <h1 id="title">Methadone Inventory Logs</h1>
 <table id="methadone-main-table" class="table table-striped table-bordered table-condensed">
   <tr>
-    <th>User ID</th>
+    <th>User</th>
     <!-- <th>Beginning or Ending Shift?</th> -->
     <th>Time Created</th>
 
@@ -24,7 +24,7 @@
 <div class="table-data">
   <% @inventory_checks.each do |inventory_check| %>
     <tr>
-      <td><%= inventory_check.user_id %></td>
+      <td><%= inventory_check.user.name %></td>
       
       <td><%= inventory_check.created_at.strftime("%B %d - %I:%M %p") %></td>
       
@@ -79,12 +79,13 @@
         <td><%= f.input :five_mg_total_inventory, disabled: true %></td>
 
         <td><%= f.input :total_inventory_count, disabled: true %></td>
+        <td>
+          <%= f.submit 'Save', :class => "btn btn-primary", :hidefocus => true %>
+        </td>
       </tr>
     </div>
 </table>
-    <div class="actions">
-      <%= f.submit 'Save', :class => "btn btn-primary" %>
-    </div>
+    
 <% end %>
 
   <script type="text/javascript">

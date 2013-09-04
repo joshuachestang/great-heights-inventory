@@ -17,6 +17,16 @@
 div#signup-box{
 	padding: 30px;
 	background-color: #0B5FA5;
+	margin-top: 50px;
+}
+
+div.great-heights-logo span{
+	font-size:20px;
+}
+
+div.great-heights-logo img#logo-gh{
+	margin-left:20px;
+	margin-bottom:20px;
 }
 
 div.span12 {

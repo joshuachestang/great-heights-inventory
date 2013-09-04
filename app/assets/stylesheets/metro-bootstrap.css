@@ -13,7 +13,31 @@
 
 
 
+footer p{
+  color:black;
+  float: right;
+}
 
+
+
+#login-button{
+    border: 2px solid white;
+  
+    font-size: 20px;
+}
+
+input#user_email, input#user_password{
+  font-size:20px;
+  width: 93%;
+}
+
+div#signup-form input{
+  width:94%;
+}
+
+div#signup-form label{
+  font-size: 20px;
+}
 
 
 
@@ -884,7 +908,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: normal;
   line-height: 25px;
 }
@@ -3660,13 +3684,13 @@ input[type="submit"].btn.btn-mini {
   overflow: visible;
 }
 .navbar .brand {
+  color: white;
   float: left;
   display: block;
-  padding: 22.5px 20px 7.5px;
+  padding: 20px 20px 7.5px;
   margin-left: -20px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 200;
-  color: white;
 }
 .navbar .brand:hover {
   text-decoration: none;
