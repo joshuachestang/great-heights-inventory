@@ -25,6 +25,10 @@ gem 'simple_form'
 
 gem "font-awesome-rails"
 
+gem 'activeadmin', github: 'gregbell/active_admin', branch: 'rails4'
+
+gem "meta_search"
+
 group :production do
   gem 'pg'
 end

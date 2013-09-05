@@ -11,7 +11,17 @@
         <div class="page-bg">
           <%= simple_form_for(@user, as: :user, url: session_path(:user)) do |f| %>
             <h2 class="no-top-margin">Login</h2>
-            <%= f.error_notification %>
+            <% if @user.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@user.errors.count, "error") %> </h2>
+
+                <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
 
             <%= f.input :email, autofocus: true, required: true, label: false, input_html: {class: "span12"}, placeholder: "email address" %>
             <%= f.input :password, :required => true, label: false, input_html: {class: "span12"}, placeholder: "password" %>

@@ -1,4 +1,6 @@
 GreatHeightsInventory::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :inventory_checks
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,6 +14,7 @@ GreatHeightsInventory::Application.routes.draw do
    root :to => "inventory_checks#index"
   
   devise_for :users
+  ActiveAdmin.routes(self)
 
   devise_scope :users do
     get "login",    to: "devise/sessions#new"
