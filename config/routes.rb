@@ -1,6 +1,6 @@
 GreatHeightsInventory::Application.routes.draw do
 
-  ActiveAdmin.routes(self)
+  # ActiveAdmin.routes(self)
 
   resources :inventory_checks
 

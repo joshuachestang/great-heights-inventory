@@ -7,6 +7,8 @@ Devise.setup do |config|
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
   # Configure the class responsible to send e-mails.
+
+  config.secret_key = '8538cb169adb5897b32b372c7eb5a7858117dc8bee03257fab712c9a3418b65052f143fbbfb919787c7f1a2b651a9e63c9ed60deb086b48ebabd10d8b951be7e'
   # config.mailer = "Devise::Mailer"
 
   # ==> ORM configuration
