@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   has_many :inventory_checks
 
   def name
-  	self.first_name  + " " + self.last_name
+  	self.first_name + " " + self.last_name
   end
 end
